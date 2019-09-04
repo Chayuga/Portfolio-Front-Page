@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/Bg.png);
+    background-position: center;
+    background {
+        background-size: cover;
+        repeat: true;
+    }
+    font-family: sans-serif;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu img {
+    height: 100px;
+    margin: 20px 50px;
+    cursor: pointer;
+}
+
+.menu ul {
+    display: inline-flex;
+    color: white;
+    list-style: none;
+    right: 60px;
+    top: 15px;
+    position: absolute;
+}
+
+.menu ul li {
+    margin: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu ul li .fa {
+    margin-right: 13px;
+    font-size: 20px;
+}
