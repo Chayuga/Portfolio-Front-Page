@@ -1,17 +1,58 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 }
 
-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/Bg.png);
-    background-position: center;
-    background {
-        background-size: cover;
-        repeat: true;
-    }
-    font-family: sans-serif;
+
+/* Background CSS code */
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, orange, green);
+    animation: animate 20s linear infinite;
 }
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
+section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 100vh solid transparent;
+    border-left: 100vh solid #fff;
+    opacity: 0.1;
+}
+
+section:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* border-bottom: 100vh solid transparent; */
+    border-bottom: 100vh solid transparent;
+    border-right: 100vh solid #fff;
+    opacity: 0.1;
+}
+
+
+/* Menu CSS code */
 
 .menu {
     width: 100%;
@@ -46,7 +87,7 @@ body {
 .banner-text {
     width: 80%;
     color: white;
-    margin: 16% auto 0;
+    margin: 5% auto 0;
 }
 
 .banner-text h1 {
@@ -101,4 +142,35 @@ body {
 
 .banner-text ul li:hover span {
     width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+footer p {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: orange;
+    font-size: 400;
+}
+
+footer a:hover {
+    color: green;
+    transition: 0.3s;
+    text-shadow: greenyellow;
+    font-weight: 500;
+    font-size: 500;
 }
